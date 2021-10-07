@@ -16,6 +16,9 @@ public class CountingLetters {
 		text.replaceAll(" ", "");
 		System.out.println(text);
 
+		
+		
+		
 		String[] words = text.split("", text.length());
 
 		for (int i = 0; i < words.length; i++) {

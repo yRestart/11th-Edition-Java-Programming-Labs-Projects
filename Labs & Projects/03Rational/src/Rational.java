@@ -124,6 +124,7 @@ public class Rational {
 	 * @param r the rational number to add
 	 * @return the resulting rational
 	 */
+	// Add
 	public Rational add(Rational r) {
 		int n1 = getNumerator();
 		int n2 = r.getNumerator();
@@ -155,13 +156,13 @@ public class Rational {
 
 	// Reciprocal
 	public Rational getReciprocal() {
-		int n = getDenominator();
-		int d = getNumerator();
-		Rational reciprocal = new Rational(n, d);
+		int num = getDenominator();
+		int dom = getNumerator();
+		Rational reciprocal = new Rational(num, dom);
 		return reciprocal;
 	}
 
-	// pow
+	// Math.pow POWER
 	public double power(Rational r) {
 
 		double powOneNum = getNumerator();
@@ -176,7 +177,7 @@ public class Rational {
 		return power;
 	}
 	
-	// Checking if equal
+	// Check if equal
 	public String isEqual(Rational r) {
 		if(getNumerator() == r.getNumerator() && getDenominator() == r.getDenominator()) {
 			String x = "The rational numbers are equal to each other.";

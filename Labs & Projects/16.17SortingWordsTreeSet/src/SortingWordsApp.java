@@ -12,7 +12,7 @@ public class SortingWordsApp {
 		String line;
 		System.out.printf("Enter a sentence: ");
 		line = input.nextLine();
-		
+
 		String[] list = line.split("\\s");
 
 		for (int i = 0; i < list.length; i++) {

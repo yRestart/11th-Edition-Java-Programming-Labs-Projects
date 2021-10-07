@@ -79,33 +79,12 @@ public class Combination {
 	 * @param k in a group
 	 * @return the number of ways to take n things k at a time
 	 */
-	private static int combinationFactorial(int n, int k) {
-		int p = 1;
-		k = 1;
-
-		// choosing the smaller value
-		if (n - k < k) {
-			k = n - k;
-		}
-
-		if (k != 0) {
-			while (k > 0) {
-				p *= n;
-				k *= k;
-
-				// gcd of p, k
-				double m = gcd(p, k); // dividing by gcd, to simplify
-
-				p /= m;
-				k /= m;
-
-				n--;
-				k--;
-			}
+	private static int combinationRecursive(int n, int k) {
+		if (k == 0 || n == k) {
+			return 1;
 		} else {
-			p = 1;
+			return (int)(n/(double)k) * combinationRecursive(n-1, k-1);
 		}
-		return p;
 	}
 	
 
@@ -116,7 +95,7 @@ public class Combination {
 	 * @param k  in a group
 	 * @return the number of ways to take n things k at a time
 	 */
-	public static int combinationRecursive(int n, int k) {
+	public static int combinationFactorial(int n, int k) {
 		return fact(n) / (fact(k) * fact(n - k));
 	}
 }

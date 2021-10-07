@@ -475,22 +475,6 @@ public class BaseStrategyApp {
 				break;
 			}
 		}
-		
-			
-		
-		
-			
-		
-		
-
-		
-		
-
-
-			
-		
-		
-	
 		// ************ END WRITING YOU CODE HERE   ******************* //
 		
 		// Return the output
